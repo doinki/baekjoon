@@ -48,10 +48,10 @@ const dom = parseDocument(
 );
 
 const title = DomUtils.textContent(
-  DomUtils.findOne(
+  DomUtils.findAll(
     (element) => element.attribs?.id === 'problem_title',
     dom.children,
-  ),
+  )[0],
 ).trim();
 
 const testCases = R.chunk(
